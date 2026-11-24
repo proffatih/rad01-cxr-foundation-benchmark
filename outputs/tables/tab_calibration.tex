@@ -1,0 +1,18 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{Calibration on the official test split under five probe/post-processing conditions (macro over the 14 findings; ECE with 15 equal-width bins). \emph{Balanced}: class-balanced training weights (a common default); \emph{Unweighted}: no class weights; \emph{Bal.+prior}: balanced logits shifted by the training log-prior odds; Platt and isotonic maps were fitted on the validation split. Bold: best (lowest) per column.}\label{tab:calibration}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccccccc}
+\toprule
+Encoder & \multicolumn{5}{c}{Macro ECE} & \multicolumn{2}{c}{Macro Brier} \\  & Balanced & Unweighted & Bal.+prior & Bal.+Platt & Bal.+isotonic & Balanced & Bal.+prior \\
+\midrule
+RAD-DINO & \textbf{0.333} & \textbf{0.012} & 0.015 & \textbf{0.011} & \textbf{0.010} & \textbf{0.206} & \textbf{0.059} \\
+BiomedCLIP & 0.395 & 0.013 & \textbf{0.015} & 0.013 & 0.014 & 0.255 & 0.062 \\
+DINOv2-S & 0.386 & 0.018 & 0.021 & 0.016 & 0.015 & 0.250 & 0.064 \\
+CLIP-B/16 & 0.382 & 0.018 & 0.021 & 0.017 & 0.017 & 0.252 & 0.065 \\
+ResNet-50 & 0.378 & 0.015 & 0.019 & 0.015 & 0.016 & 0.240 & 0.064 \\
+ViT-B/16 & 0.378 & 0.016 & 0.020 & 0.015 & 0.015 & 0.243 & 0.064 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

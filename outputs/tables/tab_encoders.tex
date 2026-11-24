@@ -1,0 +1,25 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{Encoders and forward-pass latency (ms per image). GPU: RTX 3070 Laptop GPU, fp32 unless stated; CPU: 11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz, 4 threads, batch 1, fp32. Latency is the median over timed iterations of the encoder forward pass on a pre-processed tensor already on the device (image decoding and resizing excluded), divided by the batch size. Bold: fastest per column within each block. The last three rows are architecture-matched controls.}\label{tab:encoders}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccccccccc}
+\toprule
+Encoder & Data & Objective & Arch. & Params (M) & Input & GPU b1 & GPU b32 & GPU b32 fp16 & CPU b1 \\
+\midrule
+
+\multicolumn{10}{l}{\emph{Main encoders}} \\
+RAD-DINO & Radiology & SSL (DINOv2) & ViT-B/14 & 86.6 & 518$^2$ & 66.8 & 67.14 & 16.42 & 921 \\
+BiomedCLIP & Biomedical & VL contrastive & ViT-B/16 & 86.2 & 224$^2$ & 9.4 & 7.13 & 2.00 & 106 \\
+DINOv2-S & Natural & SSL (DINOv2) & ViT-S/14 & 22.1 & 224$^2$ & 5.7 & 2.91 & 1.09 & \textbf{39} \\
+CLIP-B/16 & Natural (web) & VL contrastive & ViT-B/16 & 86.2 & 224$^2$ & 10.2 & 7.23 & 2.26 & 109 \\
+ResNet-50 & Natural & Supervised & ResNet-50 & 23.5 & 224$^2$ & \textbf{2.8} & \textbf{1.64} & \textbf{0.92} & 40 \\
+ViT-B/16 & Natural & Supervised & ViT-B/16 & 85.8 & 224$^2$ & 9.4 & 7.16 & 2.00 & 104 \\
+\midrule
+\multicolumn{10}{l}{\emph{Controls}} \\
+RAD-DINO@224 & Radiology & SSL (DINOv2) & ViT-B/14 & 86.6 & 224$^2$ & 14.8 & 9.25 & \textbf{2.92} & 141 \\
+DINOv2-B & Natural & SSL (DINOv2) & ViT-B/14 & 86.6 & 224$^2$ & \textbf{14.8} & \textbf{9.23} & 2.93 & \textbf{141} \\
+DINOv2-B@518 & Natural & SSL (DINOv2) & ViT-B/14 & 86.6 & 518$^2$ & 68.1 & 66.98 & 16.47 & 922 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,25 @@
+\begin{table}[H]\centering
+\footnotesize
+\caption{Discrimination on the official NIH ChestX-ray14 test split (25,596 images, 2,797 patients). Macro values average the 14 findings; triage is the binary any-finding vs.\ No Finding target. CIs: patient-level cluster bootstrap, B\,=\,2,000. Bold: best per column within each block.}\label{tab:macro}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccccc}
+\toprule
+Encoder & Macro AUROC & 95\,\% CI & Macro AUPRC & Triage AUROC & 95\,\% CI \\
+\midrule
+
+\multicolumn{6}{l}{\emph{Main encoders}} \\
+RAD-DINO & \textbf{0.809} & [0.802, 0.815] & \textbf{0.263} & \textbf{0.725} & [0.714, 0.736] \\
+BiomedCLIP & 0.745 & [0.737, 0.753] & 0.183 & 0.698 & [0.686, 0.710] \\
+DINOv2-S & 0.731 & [0.724, 0.738] & 0.164 & 0.688 & [0.677, 0.700] \\
+CLIP-B/16 & 0.699 & [0.691, 0.707] & 0.143 & 0.666 & [0.655, 0.678] \\
+ResNet-50 & 0.714 & [0.706, 0.722] & 0.157 & 0.678 & [0.667, 0.689] \\
+ViT-B/16 & 0.726 & [0.719, 0.733] & 0.163 & 0.688 & [0.677, 0.699] \\
+\midrule
+\multicolumn{6}{l}{\emph{Controls}} \\
+RAD-DINO@224 & \textbf{0.800} & [0.792, 0.806] & \textbf{0.251} & \textbf{0.723} & [0.712, 0.734] \\
+DINOv2-B & 0.745 & [0.738, 0.752] & 0.178 & 0.692 & [0.681, 0.705] \\
+DINOv2-B@518 & 0.755 & [0.748, 0.762] & 0.193 & 0.695 & [0.683, 0.707] \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,90 @@
+{
+ "gpu": "NVIDIA GeForce RTX 3070 Laptop GPU",
+ "cpu": "11th Gen Intel(R) Core(TM) i7-11370H @ 3.30GHz",
+ "cpu_threads": 4,
+ "torch": "2.6.0+cu124",
+ "protocol": "latency.py \u2014 inference-latency protocol.\n\nWhat is timed: the encoder forward pass only, on an input tensor that is already\npre-processed and resident on the target device (image decoding, resizing and\nhost-to-device transfer are excluded). Linear-probe cost is negligible (one D x 15\nmatrix product) and excluded.\n\nGPU: NVIDIA RTX 3070 Laptop (8 GB), CUDA events + synchronize; 20 warm-up and 100 timed\niterations; reported = median iteration time / batch size, for batch 1 and 32,\nfp32 (primary) and fp16 autocast.\nCPU: batch 1, fp32, torch threads = physical cores; 5 warm-up, 30 timed iterations.\nOutput: results/latency.json",
+ "configs": {
+  "rad_dino_518": {
+   "input": 518,
+   "params_M": 86.6,
+   "gpu_fp32_b1_ms": 66.8282241821289,
+   "gpu_fp16_b1_ms": 19.307007789611816,
+   "gpu_fp32_b32_ms": 67.1430549621582,
+   "gpu_fp16_b32_ms": 16.42422389984131,
+   "cpu_fp32_b1_ms": 920.9537184797227
+  },
+  "rad_dino_224": {
+   "input": 224,
+   "params_M": 86.6,
+   "gpu_fp32_b1_ms": 14.781951904296875,
+   "gpu_fp16_b1_ms": 6.324015855789185,
+   "gpu_fp32_b32_ms": 9.25190544128418,
+   "gpu_fp16_b32_ms": 2.922976016998291,
+   "cpu_fp32_b1_ms": 140.54786413908005
+  },
+  "dinov2_base_518": {
+   "input": 518,
+   "params_M": 86.6,
+   "gpu_fp32_b1_ms": 68.13695907592773,
+   "gpu_fp16_b1_ms": 19.575295448303223,
+   "gpu_fp32_b32_ms": 66.9794692993164,
+   "gpu_fp16_b32_ms": 16.474064826965332,
+   "cpu_fp32_b1_ms": 921.7559103854
+  },
+  "dinov2_base_224": {
+   "input": 224,
+   "params_M": 86.6,
+   "gpu_fp32_b1_ms": 14.758895874023438,
+   "gpu_fp16_b1_ms": 6.3452160358428955,
+   "gpu_fp32_b32_ms": 9.227616310119629,
+   "gpu_fp16_b32_ms": 2.9266079664230347,
+   "cpu_fp32_b1_ms": 140.54450578987598
+  },
+  "dinov2_small_224": {
+   "input": 224,
+   "params_M": 22.1,
+   "gpu_fp32_b1_ms": 5.749248027801514,
+   "gpu_fp16_b1_ms": 3.0658559799194336,
+   "gpu_fp32_b32_ms": 2.912608027458191,
+   "gpu_fp16_b32_ms": 1.0894225239753723,
+   "cpu_fp32_b1_ms": 39.08419422805309
+  },
+  "biomedclip_224": {
+   "input": 224,
+   "params_M": 86.2,
+   "gpu_fp32_b1_ms": 9.350656032562256,
+   "gpu_fp16_b1_ms": 3.5500800609588623,
+   "gpu_fp32_b32_ms": 7.132751941680908,
+   "gpu_fp16_b32_ms": 2.0035979747772217,
+   "cpu_fp32_b1_ms": 106.25631781294942
+  },
+  "clip_b16_224": {
+   "input": 224,
+   "params_M": 86.2,
+   "gpu_fp32_b1_ms": 10.191871643066406,
+   "gpu_fp16_b1_ms": 3.9720959663391113,
+   "gpu_fp32_b32_ms": 7.234656095504761,
+   "gpu_fp16_b32_ms": 2.259379029273987,
+   "cpu_fp32_b1_ms": 108.53251907974482
+  },
+  "resnet50_224": {
+   "input": 224,
+   "params_M": 23.5,
+   "gpu_fp32_b1_ms": 2.7545599937438965,
+   "gpu_fp16_b1_ms": 2.573840022087097,
+   "gpu_fp32_b32_ms": 1.6399025321006775,
+   "gpu_fp16_b32_ms": 0.9177599847316742,
+   "cpu_fp32_b1_ms": 39.56705844029784
+  },
+  "vit_b16_224": {
+   "input": 224,
+   "params_M": 85.8,
+   "gpu_fp32_b1_ms": 9.42899227142334,
+   "gpu_fp16_b1_ms": 3.5384000539779663,
+   "gpu_fp32_b32_ms": 7.156158924102783,
+   "gpu_fp16_b32_ms": 1.99726402759552,
+   "cpu_fp32_b1_ms": 103.92167326062918
+  }
+ }
+}

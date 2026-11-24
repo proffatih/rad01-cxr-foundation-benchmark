@@ -1,0 +1,27 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{Per-finding test AUROC $\pm$ half-width of the 95\,\% patient-level cluster-bootstrap CI (main encoders; official test split). $n_+$: positive test images. Bold: best encoder per finding.}\label{tab:perlabel}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrcccccc}
+\toprule
+Finding & $n_+$ & RAD-DINO & BiomedCLIP & DINOv2-S & CLIP-B/16 & ResNet-50 & ViT-B/16 \\
+\midrule
+Atelectasis & 3,279 & \textbf{0.768$\pm$0.014} & 0.703$\pm$0.015 & 0.690$\pm$0.014 & 0.659$\pm$0.014 & 0.670$\pm$0.015 & 0.690$\pm$0.014 \\
+Cardiomegaly & 1,069 & \textbf{0.888$\pm$0.017} & 0.839$\pm$0.020 & 0.763$\pm$0.026 & 0.713$\pm$0.026 & 0.745$\pm$0.028 & 0.752$\pm$0.026 \\
+Effusion & 4,658 & \textbf{0.808$\pm$0.011} & 0.769$\pm$0.014 & 0.750$\pm$0.013 & 0.707$\pm$0.014 & 0.720$\pm$0.013 & 0.746$\pm$0.014 \\
+Infiltration & 6,112 & \textbf{0.699$\pm$0.011} & 0.673$\pm$0.011 & 0.665$\pm$0.011 & 0.641$\pm$0.012 & 0.653$\pm$0.011 & 0.656$\pm$0.012 \\
+Mass & 1,748 & \textbf{0.830$\pm$0.023} & 0.741$\pm$0.021 & 0.679$\pm$0.024 & 0.651$\pm$0.026 & 0.658$\pm$0.024 & 0.667$\pm$0.024 \\
+Nodule & 1,623 & \textbf{0.760$\pm$0.022} & 0.667$\pm$0.022 & 0.666$\pm$0.020 & 0.629$\pm$0.021 & 0.649$\pm$0.020 & 0.667$\pm$0.022 \\
+Pneumonia & 555 & \textbf{0.717$\pm$0.023} & 0.666$\pm$0.025 & 0.614$\pm$0.027 & 0.591$\pm$0.026 & 0.622$\pm$0.025 & 0.619$\pm$0.027 \\
+Pneumothorax & 2,665 & \textbf{0.879$\pm$0.013} & 0.793$\pm$0.017 & 0.773$\pm$0.019 & 0.749$\pm$0.019 & 0.774$\pm$0.018 & 0.780$\pm$0.019 \\
+Consolidation & 1,815 & \textbf{0.737$\pm$0.015} & 0.707$\pm$0.015 & 0.681$\pm$0.016 & 0.675$\pm$0.017 & 0.673$\pm$0.016 & 0.681$\pm$0.016 \\
+Edema & 925 & \textbf{0.851$\pm$0.016} & 0.814$\pm$0.019 & 0.803$\pm$0.018 & 0.779$\pm$0.018 & 0.775$\pm$0.019 & 0.791$\pm$0.018 \\
+Emphysema & 1,093 & \textbf{0.864$\pm$0.016} & 0.776$\pm$0.023 & 0.786$\pm$0.023 & 0.749$\pm$0.025 & 0.765$\pm$0.024 & 0.782$\pm$0.022 \\
+Fibrosis & 435 & \textbf{0.846$\pm$0.021} & 0.781$\pm$0.026 & 0.768$\pm$0.027 & 0.740$\pm$0.030 & 0.758$\pm$0.034 & 0.765$\pm$0.029 \\
+Pleural Thickening & 1,143 & \textbf{0.790$\pm$0.017} & 0.717$\pm$0.023 & 0.712$\pm$0.019 & 0.695$\pm$0.023 & 0.683$\pm$0.023 & 0.695$\pm$0.021 \\
+Hernia & 86 & \textbf{0.891$\pm$0.051} & 0.784$\pm$0.064 & 0.890$\pm$0.043 & 0.807$\pm$0.065 & 0.853$\pm$0.057 & 0.875$\pm$0.045 \\
+Any finding (triage) & 15,735 & \textbf{0.725$\pm$0.011} & 0.698$\pm$0.012 & 0.688$\pm$0.012 & 0.666$\pm$0.011 & 0.678$\pm$0.011 & 0.688$\pm$0.011 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

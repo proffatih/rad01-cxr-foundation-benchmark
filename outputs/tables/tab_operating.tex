@@ -1,0 +1,25 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{High-sensitivity operating points on the official test split. Thresholds were fixed on the validation split to reach 95\,\% sensitivity and transported unchanged to the test split; `Spec.@95\,\%~(test)' is the threshold-free specificity at exactly 95\,\% test sensitivity. Missed-diagnosis rate = 1 $-$ sensitivity. `Below thr.' = share of test studies that fall below the triage threshold (candidate for deprioritisation). Bold: best per column within each block.}\label{tab:operating}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccccccc}
+\toprule
+ & \multicolumn{3}{c}{14 findings (macro)} & \multicolumn{4}{c}{Triage: any finding vs.\ No Finding} \\ Encoder & Sens. & Spec. & Spec.@95\,\% (test) & Sens. & Spec. & NPV & Below thr. (\%) \\
+\midrule
+
+\multicolumn{8}{l}{\emph{Main encoders}} \\
+RAD-DINO & 0.975 & \textbf{0.262} & \textbf{0.378} & 0.993 & \textbf{0.079} & \textbf{0.876} & 3.5 \\
+BiomedCLIP & 0.960 & 0.217 & 0.270 & 0.988 & 0.072 & 0.795 & 3.5 \\
+DINOv2-S & 0.964 & 0.198 & 0.261 & 0.989 & 0.070 & 0.796 & 3.4 \\
+CLIP-B/16 & 0.955 & 0.180 & 0.211 & 0.987 & 0.059 & 0.747 & 3.1 \\
+ResNet-50 & 0.972 & 0.144 & 0.239 & 0.989 & 0.066 & 0.790 & 3.2 \\
+ViT-B/16 & 0.965 & 0.188 & 0.244 & 0.989 & 0.076 & 0.809 & \textbf{3.6} \\
+\midrule
+\multicolumn{8}{l}{\emph{Controls}} \\
+RAD-DINO@224 & 0.963 & \textbf{0.274} & \textbf{0.357} & 0.994 & 0.073 & \textbf{0.885} & 3.2 \\
+DINOv2-B & 0.966 & 0.223 & 0.287 & 0.992 & 0.067 & 0.835 & 3.1 \\
+DINOv2-B@518 & 0.964 & 0.239 & 0.298 & 0.990 & \textbf{0.077} & 0.824 & \textbf{3.6} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

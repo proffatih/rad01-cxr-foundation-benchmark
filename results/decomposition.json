@@ -1,0 +1,38 @@
+{
+ "rad_dino_518": {
+  "orig_emb|orig_probe": 0.6868806726997706,
+  "orig_emb|study_probe": 0.7602519614978264,
+  "corr_emb|orig_probe": 0.6887728895739132,
+  "corr_emb|study_probe": 0.760019301350375
+ },
+ "biomedclip_224": {
+  "orig_emb|orig_probe": 0.6937416302904031,
+  "orig_emb|study_probe": 0.7277999793482859,
+  "corr_emb|orig_probe": 0.6937956547920565,
+  "corr_emb|study_probe": 0.7277572913302578
+ },
+ "dinov2_small_224": {
+  "orig_emb|orig_probe": 0.6557156832616754,
+  "orig_emb|study_probe": 0.6955585625548582,
+  "corr_emb|orig_probe": 0.6556970133722478,
+  "corr_emb|study_probe": 0.6998550117965051
+ },
+ "clip_b16_224": {
+  "orig_emb|orig_probe": 0.5895273765548649,
+  "orig_emb|study_probe": 0.6066346070454017,
+  "corr_emb|orig_probe": 0.5878777830247622,
+  "corr_emb|study_probe": 0.6055925508947
+ },
+ "resnet50_224": {
+  "orig_emb|orig_probe": 0.6202656908949084,
+  "orig_emb|study_probe": 0.6948833525365535,
+  "corr_emb|orig_probe": 0.6197351751630819,
+  "corr_emb|study_probe": 0.6945128909415299
+ },
+ "vit_b16_224": {
+  "orig_emb|orig_probe": 0.6720068284146816,
+  "orig_emb|study_probe": 0.680418215551393,
+  "corr_emb|orig_probe": 0.6427683458298551,
+  "corr_emb|study_probe": 0.6673428150608902
+ }
+}

@@ -1,0 +1,25 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{External validation on the Indiana University collection (Open-i; 3,689 reports, one frontal image each; probes trained on NIH and applied without re-fitting). Triage: 2,245 reports that are either tagged normal or carry a mapped finding (902 abnormal). Thresholds are the NIH-validation thresholds for 95\,\% sensitivity. CI: report-level bootstrap, B\,=\,500. Bold: best per column within each block.}\label{tab:external}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{Macro AUROC, 9 mapped findings} & \multicolumn{3}{c}{Triage} \\ Encoder & NIH test & External & 95\,\% CI & AUROC & Sens.\ (NIH thr.) & Spec.\ (NIH thr.) \\
+\midrule
+
+\multicolumn{7}{l}{\emph{Main encoders}} \\
+RAD-DINO & \textbf{0.805} & \textbf{0.855} & [0.837, 0.872] & \textbf{0.839} & 0.990 & 0.068 \\
+BiomedCLIP & 0.744 & 0.794 & [0.777, 0.812] & 0.835 & 0.960 & \textbf{0.261} \\
+DINOv2-S & 0.736 & 0.779 & [0.761, 0.797] & 0.830 & 0.968 & 0.211 \\
+CLIP-B/16 & 0.697 & 0.707 & [0.688, 0.728] & 0.782 & 0.949 & 0.223 \\
+ResNet-50 & 0.717 & 0.763 & [0.747, 0.782] & 0.822 & 0.962 & 0.229 \\
+ViT-B/16 & 0.731 & 0.745 & [0.725, 0.764] & 0.807 & 0.965 & 0.169 \\
+\midrule
+\multicolumn{7}{l}{\emph{Controls}} \\
+RAD-DINO@224 & \textbf{0.796} & \textbf{0.844} & [0.825, 0.861] & \textbf{0.844} & 0.993 & 0.078 \\
+DINOv2-B & 0.750 & 0.783 & [0.766, 0.801] & 0.842 & 0.970 & \textbf{0.245} \\
+DINOv2-B@518 & 0.759 & 0.787 & [0.769, 0.807] & 0.833 & 0.958 & \textbf{0.245} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,18 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{Sensitivity of a small-sample benchmark to implementation details (macro AUROC on a fixed 3,000-image subset of the first NIH image shard with a 2,000/500/500 patient-disjoint split and 55\,\% any-finding enrichment). Pipeline A: images stored at $224^2$ (upsampled to $518^2$ for RAD-DINO), ImageNet normalisation for all encoders except the CLIP models, un-projected CLIP-B/16 feature, and features standardised to zero mean and unit variance before a \texttt{liblinear} logistic regression. Pipeline B: as A but with the image preparation, normalisation and representations of Section~\ref{sec:backbones}. Pipeline C: as B with the probe of Section~\ref{sec:probe} (no feature standardisation). Last column: pipeline C on the full data and official test split. Bold: best per column.}\label{tab:decomposition}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{3}{c}{3,000-image subset (2,000 / 500 / 500)} & Full data \\ Encoder & Pipeline A & Pipeline B & Pipeline C & Pipeline C, official test \\
+\midrule
+RAD-DINO & 0.687 & 0.689 & \textbf{0.760} & \textbf{0.809} \\
+BiomedCLIP & \textbf{0.694} & \textbf{0.694} & 0.728 & 0.745 \\
+DINOv2-S & 0.656 & 0.656 & 0.700 & 0.731 \\
+CLIP-B/16 & 0.590 & 0.588 & 0.606 & 0.699 \\
+ResNet-50 & 0.620 & 0.620 & 0.695 & 0.714 \\
+ViT-B/16 & 0.672 & 0.643 & 0.667 & 0.726 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{Controlled contrasts in which only one factor differs. Last column: number of the 14 findings whose per-label 95\,\% CI of the difference excludes zero in favour of A / of B.}\label{tab:contrasts}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccc}
+\toprule
+Contrast (A vs.\ B) & Factor varied & $\Delta$ macro AUROC & 95\,\% CI & Findings A$>$B / B$>$A \\
+\midrule
+RAD-DINO@224 vs.\ DINOv2-B & data domain (radiology vs natural) & +0.055 & [0.049, 0.060] & 13 / 0 \\
+RAD-DINO vs.\ DINOv2-B@518 & data domain (radiology vs natural) & +0.054 & [0.048, 0.059] & 12 / 0 \\
+BiomedCLIP vs.\ CLIP-B/16 & data domain (biomedical vs web) & +0.046 & [0.040, 0.052] & 13 / 0 \\
+RAD-DINO vs.\ RAD-DINO@224 & input resolution 518 vs 224 & +0.009 & [0.007, 0.011] & 9 / 0 \\
+DINOv2-B@518 vs.\ DINOv2-B & input resolution 518 vs 224 & +0.010 & [0.007, 0.014] & 8 / 0 \\
+DINOv2-B vs.\ DINOv2-S & model scale ViT-B vs ViT-S & +0.014 & [0.010, 0.018] & 6 / 0 \\
+CLIP-B/16 vs.\ ViT-B/16 & objective (contrastive web vs supervised ImageNet) & -0.027 & [-0.033, -0.022] & 0 / 10 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

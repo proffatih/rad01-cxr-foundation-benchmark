@@ -1,0 +1,27 @@
+\begin{table}[H]\centering
+\scriptsize
+\caption{All pairwise macro-AUROC differences among the six main encoders (patient-level cluster bootstrap; two-sided bootstrap $p$-values, Holm-adjusted over 15 comparisons). Equivalence margin fixed before the analysis; the \emph{below margin} qualifier was added afterwards (Section~\ref{sec:metrics}). Rule: \emph{different} if $p_{\mathrm{Holm}}<0.05$, qualified as \emph{below margin} when the whole 95\,\% CI also lies within $\pm$0.01; \emph{equivalent} if the CI lies within $\pm$0.01 and $p_{\mathrm{Holm}}\geq0.05$; otherwise \emph{inconclusive}.}\label{tab:pairwise}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccc}
+\toprule
+Pair (A $-$ B) & $\Delta$ macro AUROC & 95\,\% CI & $p_{\mathrm{Holm}}$ & Decision \\
+\midrule
+RAD-DINO $-$ BiomedCLIP & +0.064 & [0.057, 0.070] & $<$0.001 & different \\
+RAD-DINO $-$ DINOv2-S & +0.078 & [0.072, 0.084] & $<$0.001 & different \\
+RAD-DINO $-$ CLIP-B/16 & +0.110 & [0.103, 0.116] & $<$0.001 & different \\
+RAD-DINO $-$ ResNet-50 & +0.095 & [0.089, 0.101] & $<$0.001 & different \\
+RAD-DINO $-$ ViT-B/16 & +0.083 & [0.077, 0.089] & $<$0.001 & different \\
+BiomedCLIP $-$ DINOv2-S & +0.014 & [0.008, 0.020] & $<$0.001 & different \\
+BiomedCLIP $-$ CLIP-B/16 & +0.046 & [0.040, 0.052] & $<$0.001 & different \\
+BiomedCLIP $-$ ResNet-50 & +0.031 & [0.024, 0.038] & $<$0.001 & different \\
+BiomedCLIP $-$ ViT-B/16 & +0.019 & [0.013, 0.025] & $<$0.001 & different \\
+DINOv2-S $-$ CLIP-B/16 & +0.032 & [0.027, 0.038] & $<$0.001 & different \\
+DINOv2-S $-$ ResNet-50 & +0.017 & [0.013, 0.022] & $<$0.001 & different \\
+DINOv2-S $-$ ViT-B/16 & +0.005 & [0.001, 0.009] & 0.014 & different, below margin \\
+CLIP-B/16 $-$ ResNet-50 & -0.015 & [-0.021, -0.009] & $<$0.001 & different \\
+CLIP-B/16 $-$ ViT-B/16 & -0.027 & [-0.033, -0.022] & $<$0.001 & different \\
+ResNet-50 $-$ ViT-B/16 & -0.012 & [-0.017, -0.007] & $<$0.001 & different \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
